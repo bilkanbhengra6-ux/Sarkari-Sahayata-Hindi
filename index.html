@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="cHHRvqq3j2QTx9r1MAjVeN_R-GxbkibjfMH8XpOUZhU" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarkari Sahayata Hindi - Sabhi Yojanaon Ki Jaankari</title>
+    <style>
+        :root { --blue-dark: #1e3a8a; --blue-light: #eff6ff; --accent: #dc2626; --text: #1f2937; }
+        body { margin: 0; font-family: 'Arial', sans-serif; background: #f3f4f6; color: var(--text); line-height: 1.6; }
+        header { background: white; border-bottom: 4px solid var(--blue-dark); padding: 20px; text-align: center; }
+        .logo { color: var(--blue-dark); font-size: 26px; font-weight: bold; text-transform: uppercase; }
+        .news-bar { background: var(--blue-dark); color: white; padding: 10px; font-size: 14px; }
+        .container { max-width: 850px; margin: 20px auto; padding: 15px; }
+        
+        /* Ad Spaces */
+        .ad-space { background: #e5e7eb; border: 1px dashed #9ca3af; text-align: center; padding: 20px; margin: 20px 0; border-radius: 8px; color: #6b7280; font-size: 13px; font-weight: bold; }
+        
+        /* Article Cards */
+        .scheme-card { background: white; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); overflow: hidden; border: 1px solid #e5e7eb; }
+        .scheme-img { width: 100%; height: 220px; overflow: hidden; }
+        .scheme-img img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .scheme-content { padding: 20px; }
+        .scheme-content h2 { margin: 0 0 10px 0; color: var(--blue-dark); font-size: 22px; }
+        .tag { display: inline-block; background: #22c55e; color: white; padding: 3px 12px; border-radius: 50px; font-size: 12px; margin-bottom: 10px; font-weight: bold; }
+        
+        .btn-more { display: inline-block; background: var(--blue-dark); color: white; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; width: 100%; margin-top: 15px; font-size: 16px; }
+        .details-box { display: none; margin-top: 15px; padding: 15px; background: #f8fafc; border-radius: 8px; border-left: 4px solid var(--blue-dark); }
+        
+        /* Footer & Pages */
+        footer { background: #0f172a; color: white; padding: 50px 20px; margin-top: 50px; }
+        .footer-content { max-width: 850px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; text-align: left; }
+        @media (max-width: 600px) { .footer-content { grid-template-columns: 1fr; } }
+        .footer-bottom { border-top: 1px solid #334155; margin-top: 30px; padding-top: 20px; font-size: 12px; color: #9ca3af; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">🇮🇳 SARKARI SAHAYATA</div>
+        <p style="margin:5px 0; color:var(--accent); font-weight:bold;">Har Yojana Ki Jaankari, Ab Hindi Mein</p>
+    </header>
+
+    <div class="news-bar"><marquee>UPDATE: PM Kisan 17th Kist Status Check Karein | Ayushman Card Nayi List 2026 Out!</marquee></div>
+
+    <div class="container">
+
+        <div class="ad-space">GOOGLE ADS - TOP BANNER</div>
+
+        <div class="scheme-card">
+            <div class="scheme-img"><img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=800&q=80" alt="Farmer"></div>
+            <div class="scheme-content">
+                <span class="tag">Kisan Special</span>
+                <h2>PM Kisan Samman Nidhi Yojana 2026</h2>
+                <p>Kisanon ke liye badi khushkhabri! Agli kist ki tarikh jari ho gayi hai. Jaaniye kaise check karein apna naam.</p>
+                <div id="d1" class="details-box">
+                    <p><b>Eligibility:</b> Sabhi kisan bhai jinke paas kheti ki zameen hai.</p>
+                    <p><b>Documents:</b> Aadhar, Bank Passbook aur e-KYC hona zaroori hai.</p>
+                </div>
+                <button class="btn-more" onclick="toggle('d1')">Poora Padhein & Status Check</button>
+            </div>
+        </div>
+
+        <div class="scheme-card">
+            <div class="scheme-img"><img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80" alt="House"></div>
+            <div class="scheme-content">
+                <span class="tag" style="background:#f59e0b;">Ghar Yojana</span>
+                <h2>PM Awas Yojana (Gramin) Nayi List</h2>
+                <p>Ab garib pariwaron ko milenge 1.20 Lakh rupaye pakka ghar banane ke liye.</p>
+                <div id="d2" class="details-box">
+                    <p><b>Fayda:</b> Sarkaar ghar banane ke liye paisa seedhe bank account mein bhejti hai.</p>
+                </div>
+                <button class="btn-more" style="background:#f59e0b;" onclick="toggle('d2')">Beneficiary List Dekhein</button>
+            </div>
+        </div>
+
+        <div class="ad-space" style="height:150px; display:flex; align-items:center; justify-content:center;">GOOGLE ADS - MIDDLE</div>
+
+        <div class="scheme-card">
+            <div class="scheme-img"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80" alt="Hospital"></div>
+            <div class="scheme-content">
+                <span class="tag" style="background:#ef4444;">Health</span>
+                <h2>Ayushman Bharat: 5 Lakh Free Ilaaj</h2>
+                <p>Ayushman Card se kisi bhi bade hospital mein muft ilaaj karwayein. Check karein apna naam.</p>
+                <div id="d3" class="details-box">
+                    <p><b>Apply:</b> CSC Center par jaakar turant apna Golden Card banwayein.</p>
+                </div>
+                <button class="btn-more" style="background:#ef4444;" onclick="toggle('d3')">Ilaaj Ki Jankari Padhein</button>
+            </div>
+        </div>
+
+        <div class="ad-space">GOOGLE ADS - SQUARE AD</div>
+
+        <div class="scheme-card">
+            <div class="scheme-img"><img src="https://images.unsplash.com/photo-1590247813693-5541d1c609fd?auto=format&fit=crop&w=800&q=80" alt="Food"></div>
+            <div class="scheme-content">
+                <span class="tag" style="background:#3b82f6;">Ration</span>
+                <h2>Free Ration Yojana For 5 Years</h2>
+                <p>Sarkaar ne muft ration yojana ko agle 5 saalo ke liye badha diya hai. Jaaniye naye fayde.</p>
+                <div id="d4" class="details-box">
+                    <p><b>Fayda:</b> Gehu, Chawal ke saath kuch rajyon mein tel aur dal bhi mil rahi hai.</p>
+                </div>
+                <button class="btn-more" style="background:#3b82f6;" onclick="toggle('d4')">Ration Card Updates</button>
+            </div>
+        </div>
+
+        <div class="ad-space">GOOGLE ADS - BOTTOM</div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div id="about">
+                <h3 style="color:#22c55e;">About Us</h3>
+                <p>Sarkari Sahayata Hindi ek madyam hai garib pariwaron tak sarkaari yojanaon ki sahi aur sachi jaankari pahunchane ka.</p>
+            </div>
+            <div id="contact">
+                <h3 style="color:#22c55e;">Contact Us</h3>
+                <p>Email: <b>bilkanbhengra6gmail.com</b></p>
+                <p>Privacy Policy | Disclaimer | Terms</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sarkari Sahayata Hindi. All Rights Reserved.</p>
+            <p>Disclaimer: Hum koi sarkari sanstha nahi hain. Hum sirf news aur jaankari share karte hain.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggle(id) {
+            var x = document.getElementById(id);
+            if (x.style.display === "block") { x.style.display = "none"; } 
+            else { x.style.display = "block"; }
+        }
+    </script>
+</body>
+</html>
