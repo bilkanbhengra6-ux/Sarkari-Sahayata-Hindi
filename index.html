@@ -362,41 +362,23 @@
             { title: "Voter Card Online Correction 2026", desc: "Ghar baithe photo aur address badlein, naya PVC card mangayein.", color: "60a5fa" }
         ];
 
+                ]; // Ye articles array ka end hai
+
         articles.forEach(art => {
             const html = `
                 <div class="post-card">
-                    <div style="height:120px; background:#${art.color}; color:white; display:flex; align-items:center; justify-content:center; padding:15px; border-radius:12px 12px 0 0;">
-                        <h3 style="font-size:15px; text-align:center;">${art.title}</h3>
+                    <div style="height:120px; background:#${art.color || '3b82f6'}; color:white; display:flex; align-items:center; justify-content:center; padding:15px; border-radius:12px 12px 0 0;">
+                        <h3 style="font-size:14px; text-align:center;">${art.title}</h3>
                     </div>
                     <div class="post-content" style="padding:15px;">
                         <p style="height:50px; font-size:13px; color:#475569; overflow:hidden;">${art.desc}</p>
-                        <a href="#" class="btn btn-apply" style="display:block; text-align:center; background:#${art.color}; color:white; text-decoration:none; padding:10px; border-radius:8px; margin-top:10px; font-weight:bold;">Read Full Article</a>
+                        <a href="#" class="btn btn-apply" style="display:block; text-align:center; background:#${art.color || '3b82f6'}; color:white; text-decoration:none; padding:10px; border-radius:8px; margin-top:10px; font-weight:bold;">Read Full Article</a>
                     </div>
                 </div>
             `;
             blogContainer.innerHTML += html;
         });
-          
 
-        articles.forEach(art => {
-            const html = `
-
-
- 
-
-       articles.forEach(art => {
-            const html = `
-                <div class="post-card">
-                    <div style="height:120px; background:#${art.color}; color:white; display:flex; align-items:center; justify-content:center; font-weight:bold; text-align:center; padding:10px;">${art.title}</div>
-                    <div class="post-content">
-                        <h3 style="font-size:15px; height:40px;">${art.title}</h3>
-                        <p style="height:50px;">${art.desc}</p>
-                        <a href="#" class="btn btn-apply" style="display:block; text-align:center;">Read Full Article</a>
-                    </div>
-                </div>
-            `;
-            blogContainer.innerHTML += html;
-        });
     </script>
 </body>
 </html>
