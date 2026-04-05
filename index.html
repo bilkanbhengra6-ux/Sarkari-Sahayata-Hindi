@@ -342,22 +342,26 @@
         }
 
         // Generate Sample Blog Articles (10 articles)
-        const blogContainer = document.getElementById('blogGrid');
-const articles = [
-    { title: "One Nation One Ration Card Online 2026", desc: "Ab pure desh mein kahin bhi ration lein, card update kaise karein." },
-    { title: "PM Surya Ghar Free Bijli Yojana registration", desc: "Ghar ki chhat par solar lagwayein aur payein muft bijli." },
-    { title: "E-Shram Card Nayi Kist: 1000/- Check", desc: "Sarkar ne mazdooron ke khate mein bheje paise, list check karein." },
-    { title: "Sukanya Samriddhi Yojana: Beti Ka Bhavishya", desc: "Beti ki padhai aur shadi ke liye best sarkari scheme." },
-    { title: "PM Vishwakarma Toolkit Labh List 2026", desc: "Karigaron ko milenge 15000/- toolkit ke liye, naya update." },
-    { title: "Lakhpati Didi Yojana Apply Online", desc: "Mahilaon ko mil raha hai bina byaj ka loan business ke liye." },
-    { title: "Aadhar Card Address Update sitting at home", desc: "Mobile se aadhar mein pata badalne ka aasaan tarika." },
-    { title: "Free Silai Machine Yojana registration", desc: "Sarkar de rahi muft silai machine mahilaon ko, aise bharein form." },
-    { title: "UP Bhulekh: Khasra Khatauni Check 2026", desc: "Apni zameen ka naksha aur records online dekhein." },
-    { title: "Bihar Teacher Bharti BPSC 4.0 Update", desc: "Bihar mein 1 lakh se zyada shikshak bharti ki taiyari." },
-    { title: "Abha Card 2026: Ayushman Bharat Digital Health", desc: "Apna digital health record card online banayein aur free ilaj payein." },
-    { title: "Instagram Se Paise Kaise Kamayein? (Naya Tarika)", desc: "Bina face dikhaye theme pages banayein aur brand promotion se kamayein." },
-    { title: "Voter Card Online Correction 2026", desc: "Ghar baithe photo aur address badlein, naya PVC card mangwayein online." }
-];
+                const blogContainer = document.getElementById('blogGrid');
+        const articles = [
+            { title: "One Nation One Ration Card Online 2026", desc: "Ab pure desh mein kahin bhi ration lein, card update process...", color: "3b82f6", image: "https://v1.nitrocdn.com/fshXvXjVvX/assets/static/optimized/rev-5e4a8b7/wp-content/uploads/2021/05/ration-card.jpg" },
+            { title: "PM Surya Ghar Free Bijli Yojana", desc: "Ghar ki chhat par solar lagwayein aur payein muft bijli...", color: "8b5cf6", image: "https://sarkari-sahayata.com/wp-content/uploads/2024/02/pm-surya-ghar.jpg" },
+            { title: "E-Shram Card Nayi Kist: 1000/- Check", desc: "Sarkaar ne mazdooron ke khate mein bheje paise, list dekhein...", color: "ec4899", image: "https://eshram.gov.in/images/slider/Slider-1.jpg" },
+            { title: "Sukanya Samriddhi Yojana: Beti Ka Bhavishya", desc: "Beti ki padhai aur shadi ke liye best sarkari scheme...", color: "14b8a6", image: "https://www.india.gov.in/sites/upload_files/npi/files/ssy.jpg" },
+            { title: "PM Vishwakarma Toolkit Labh List", desc: "Karigaron ko milenge 15000/- toolkit ke liye, naya update...", color: "f43f5e", image: "https://pmvishwakarma.gov.in/images/banner1.jpg" },
+            { title: "Lakhpati Didi Yojana Apply Online", desc: "Mahilaon ko mil raha hai bina byaj ka loan business ke liye...", color: "fb923c", image: "https://lakhpatididi.gov.in/assets/images/logo.png" },
+            { title: "Aadhar Card Address Update Online", desc: "Mobile se aadhar mein pata badalne ka aasaan tarika 2026...", color: "6366f1", image: "https://uidai.gov.in/images/Banner_1_En.jpg" },
+            { title: "Free Silai Machine Yojana registration", desc: "Sarkaar de rahi muft silai machine mahilaon ko...", color: "06b6d4", image: "https://sarkari-sahayata.com/wp-content/uploads/2023/08/silai-machine.jpg" },
+            { title: "UP Bhulekh: Khasra Khatauni Check", desc: "Apni zameen ka naksha aur records online dekhein...", color: "10b981", image: "https://upbhulekh.gov.in/images/logo.png" },
+            { title: "Bihar Teacher Bharti BPSC 4.0 Update", desc: "Bihar mein 1 lakh se zyada shikshak bharti ki tayari...", color: "6d28d9", image: "https://bpsc.bih.nic.in/Images/BPSC-Logo.png" },
+            { title: "Ladli Behna Yojana 2026 Guide", desc: "Mahilao ke liye sarkar ki taraf se arthik sahayata...", color: "f472b6", image: "https://cmladlibahna.mp.gov.in/images/logo.png" },
+            { title: "AI Se Content Writing Business", desc: "Ghar baithe ChatGPT se mahine ka 50,000 kamane ka tarika.", color: "2dd4bf", image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=400" },
+            { title: "YouTube Shorts Se Paisa Kamayein", desc: "AI tools se viral shorts banayein aur paisa chhapo.", color: "f87171", image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=400" }
+        ];
+
+        articles.forEach(art => {
+            const html = `
+
 
  
 
