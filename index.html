@@ -508,20 +508,45 @@
            // Ye articles array ka end hai
 
         articles.forEach(art => {
-            const html = `
-                <div class="post-card">
-                    <div style="height:120px; background:#${art.color || '3b82f6'}; color:white; display:flex; align-items:center; justify-content:center; padding:15px; border-radius:12px 12px 0 0;">
-                        <h3 style="font-size:14px; text-align:center;">${art.title}</h3>
-                    </div>
-                    <div class="post-content" style="padding:15px;">
-                        <p style="height:50px; font-size:13px; color:#475569; overflow:hidden;">${art.desc}</p>
-                   <a href="${art.link}" target="_blank" class="btn btn-apply" style="display:block; text-align:center; background:#${art.color || '3b82f6'}; color:white; padding:10px; border-radius:5px; text-decoration:none; margin-top:10px; font-weight:bold;">Apply Now</a>
-                    </div>
+                    const html = `
+            <div class="post-card" 
+                 oncontextmenu="return false;" 
+                 style="touch-action: manipulation; cursor: pointer; -webkit-user-select: none; user-select: none;"
+                 onpointerdown="startPress(event, '${art.link}')" 
+                 onpointerup="cancelPress()" 
+                 onpointerleave="cancelPress()">
+                 
+                <div style="height:120px; background:#${art.color || '3b82f6'}; color:white; display:flex; align-items:center; justify-content:center;">
+                    <h3 style="font-size:16px; text-align:center; padding:10px; margin:0;">${art.title}</h3>
                 </div>
-            `;
+                <div class="post-content" style="padding:15px;">
+                    <p style="height:50px; font-size:13px; color:#475569; overflow:hidden; margin-bottom:10px;">${art.desc}</p>
+                    <a href="${art.link}" target="_blank" class="btn btn-apply" style="display:block; text-align:center; text-decoration:none;">Apply Now</a>
+                </div>
+            </div>
+        `;
             blogContainer.innerHTML += html;
         });
+let pressTimer;
 
-    </script>
+function startPress(e, link) {
+    // 1 second tak dabane par copy hoga
+    pressTimer = window.setTimeout(function() {
+        const fullLink = link.startsWith('http') ? link : window.location.origin + '/' + link;
+        
+        navigator.clipboard.writeText(fullLink).then(() => {
+            // Mobile par chhota vibration (agar supported ho)
+            if (navigator.vibrate) navigator.vibrate(50);
+            alert("Sarkari Sahayata: Link Copy Ho Gaya!\n" + fullLink);
+        }).catch(() => {
+            alert("Copy failed. Please try again.");
+        });
+    }, 1000); 
+}
+
+function cancelPress() {
+    clearTimeout(pressTimer);
+}
+  </script>
 </body>
 </html>
